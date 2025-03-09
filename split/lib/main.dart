@@ -17,7 +17,7 @@ class SplitApp extends StatefulWidget {
 
 class _SplitAppState extends State<SplitApp> {
   bool _isDarkMode = true;
-  final String _currentUser  = "You"; // Set your username here
+  final String _currentUser = "You"; // Set your username here
 
   void _toggleTheme() {
     setState(() {
@@ -171,7 +171,7 @@ class _SplitAppState extends State<SplitApp> {
       home: HomePage(
         toggleTheme: _toggleTheme,
         isDarkMode: _isDarkMode,
-        currentUser:_currentUser , // Pass the currentUser  here
+        currentUser: _currentUser, // Pass the currentUser here
       ),
       debugShowCheckedModeBanner: false,
     );
@@ -236,13 +236,13 @@ class Settlement {
 class HomePage extends StatefulWidget {
   final VoidCallback toggleTheme;
   final bool isDarkMode;
-  final String currentUser ;
+  final String currentUser;
 
   const HomePage({
     super.key,
     required this.toggleTheme,
     required this.isDarkMode,
-    required this.currentUser ,
+    required this.currentUser,
   });
 
   @override
@@ -292,7 +292,7 @@ class _HomePageState extends State<HomePage> {
   void _handleSettlement(Person person, double amount) {
     setState(() {
       _settlements.add(Settlement(
-        from: Person(name: widget.currentUser ),
+        from: Person(name: widget.currentUser),
         to: person,
         amount: amount,
         date: DateTime.now(),
@@ -300,8 +300,8 @@ class _HomePageState extends State<HomePage> {
 
       // Update balances
       final payerBalance = _balances.firstWhere(
-        (b) => b.name == widget.currentUser ,
-        orElse: () => PersonBalance(name: widget.currentUser ),
+        (b) => b.name == widget.currentUser,
+        orElse: () => PersonBalance(name: widget.currentUser),
       );
 
       final receiverBalance = _balances.firstWhere(
@@ -386,7 +386,12 @@ class _HomePageState extends State<HomePage> {
                         MaterialPageRoute(
                           builder: (context) => AddExpensePage(onAddExpense: _addExpense),
                         ),
-                      );
+                      ).then((_) {
+                        // Recalculate balances when returning from AddExpensePage
+                        setState(() {
+                          _calculateBalances();
+                        });
+                      });
                     },
                   ),
                   _ActionButton(
@@ -399,7 +404,7 @@ class _HomePageState extends State<HomePage> {
                         MaterialPageRoute(
                           builder: (context) => ViewBalancePage(
                             balances: _balances,
-                            currentUser : widget.currentUser ,
+                            currentUser: widget.currentUser,
                           ),
                         ),
                       );
@@ -418,7 +423,12 @@ class _HomePageState extends State<HomePage> {
                             onSettle: _handleSettlement,
                           ),
                         ),
-                      );
+                      ).then((_) {
+                        // Recalculate balances when returning from SettleUpPage
+                        setState(() {
+                          _calculateBalances();
+                        });
+                      });
                     },
                   ),
                   _ActionButton(
