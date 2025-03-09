@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'main.dart'; // Ensure this import includes Person and PersonBalance
 
 class ViewBalancePage extends StatelessWidget {
   final List<PersonBalance> balances;
@@ -13,14 +13,22 @@ class ViewBalancePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Calculate total amounts the current user is owed and owes
+    double totalOwed = 0.0; // Amount others owe the current user
+    double totalOwes = 0.0; // Amount the current user owes others
+
+    for (var balance in balances) {
+      if (balance.name == currentUser) {
+        // If the balance is for the current user, add to totalOwes
+        totalOwes += balance.owes;
+      } else {
+        // If the balance is for someone else, add to totalOwed
+        totalOwed += balance.owed;
+      }
+    }
+
     // Filter out current user's balance from the list
     final otherBalances = balances.where((b) => b.name != currentUser).toList();
-    
-    // Get current user's balance
-    final currentUserBalance = balances.firstWhere(
-      (b) => b.name == currentUser,
-      orElse: () => PersonBalance(name: currentUser),
-    );
 
     return Scaffold(
       appBar: AppBar(
@@ -36,8 +44,8 @@ class ViewBalancePage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             _TotalBalanceCard(
-              owed: currentUserBalance.owed,
-              owes: currentUserBalance.owes,
+              owed: totalOwed,
+              owes: totalOwes,
             ),
             const SizedBox(height: 24),
             Expanded(
@@ -80,14 +88,14 @@ class _TotalBalanceCard extends StatelessWidget {
               child: _BalanceColumn(
                 title: 'You are Owed',
                 amount: owed,
-                color: const Color(0xFF10B981),
+                color: const Color(0xFF10B981), // Green
               ),
             ),
             Expanded(
               child: _BalanceColumn(
                 title: 'You Owe',
                 amount: owes,
-                color: const Color(0xFFEF4444),
+                color: const Color(0xFFEF4444), // Red
               ),
             ),
           ],
