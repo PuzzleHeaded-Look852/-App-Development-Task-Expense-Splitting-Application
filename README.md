@@ -50,27 +50,27 @@ If you have the Flutter SDK installed on your machine, you can run Split locally
 
 1.  **Clone the Repository:**
 
-    \`\`\`bash
+    ```bash
     git clone https://github.com/PuzzleHeaded-Look852/-App-Development-Task-Expense-Splitting-Application.git
-    \`\`\`
+    ```
 
 2.  **Navigate to the Project Directory:**
 
-    \`\`\`bash
+    ```bash
     cd -App-Development-Task-Expense-Splitting-Application
-    \`\`\`
+    ```
 
 3.  **Install Dependencies:**
 
-    \`\`\`bash
+    ```bash
     flutter pub get
-    \`\`\`
+    ```
 
 4.  **Launch the App:**
 
-    \`\`\`bash
+    ```bash
     flutter run
-    \`\`\`
+    ```
 
     This command will build and run the app on your connected device or emulator.
 
