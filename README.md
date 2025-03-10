@@ -12,7 +12,23 @@ Split is a simple and intuitive expense tracker app designed to help users split
 *   **Dark & Light Mode:** Choose your preferred theme for comfortable viewing in any environment.
 *   **Intuitive Interface:**  A clean and user-friendly design makes splitting expenses straightforward for everyone.
 
-Imagine adding a screenshot or GIF here showcasing the app in action!  It would really enhance the README on GitHub.
+---
+
+## 📸 Screenshots 
+
+![simulator_screenshot_62368EAC-C6F2-4AE4-9FAC-904C44CA7C47](https://github.com/user-attachments/assets/de1f8d76-1bf2-43b7-8333-99393e5bf33c)
+
+![simulator_screenshot_A9067DBB-B9DB-40D5-AFD9-165887659DC7](https://github.com/user-attachments/assets/c66d3432-b5c4-4c99-b008-71ad7c1d6a9d)
+
+![simulator_screenshot_0EABFBCF-8D6B-4F29-AD4D-A100BA93AC71](https://github.com/user-attachments/assets/baab5c4b-e2e7-480f-b649-f19ec60fd1fd)
+
+![simulator_screenshot_07675DB1-D9D7-43C8-BE33-88D259CD323A](https://github.com/user-attachments/assets/ff915b94-6bb6-4070-bf9e-fc5a1ea37ee7)
+
+![simulator_screenshot_ED5703EF-BB4F-4BD3-B0C2-A64DD1A9E2C9](https://github.com/user-attachments/assets/0cc72ddc-33e4-4ae5-921a-82bd2ce66bc7)
+
+![simulator_screenshot_D2ABF2CC-F093-4B5A-80F6-465E05F8265F](https://github.com/user-attachments/assets/95de0c42-161d-4073-9f2c-6ecf9457ff2a)
+
+![simulator_screenshot_68B1533E-40C1-454C-BD60-BA26366605C8](https://github.com/user-attachments/assets/c4a51256-c734-487b-be7d-389eb04a5361)
 
 ## 🛠️ How to Run Split
 
