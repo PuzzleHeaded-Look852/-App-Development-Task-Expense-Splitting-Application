@@ -36,8 +36,7 @@ Since GitHub pages don't natively support Flutter apps, here's how you can exper
 
 **Option 1:  🚀 Run in Your Browser with an Online IDE (Easiest)**
 
-1.  Visit one of these online Dart/Flutter IDEs:
-    *   **[DartPad](https://dartpad.dev/)**: A simple online editor for Dart.
+1.  Visit this online Dart/Flutter IDEs:
     *   **[Zapp!](https://zapp.run/)**:  A more comprehensive online Flutter environment.
 
 2.  **Copy & Paste Code:** Grab the code from the `lib` directory in this repository:  [lib folder](https://github.com/PuzzleHeaded-Look852/-App-Development-Task-Expense-Splitting-Application/tree/main/split/lib)
