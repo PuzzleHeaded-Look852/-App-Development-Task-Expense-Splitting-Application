@@ -16,7 +16,7 @@ Split is a simple and intuitive expense tracker app designed to help users split
 
 ## 📸 Screenshots 
 
-![simulator_screenshot_62368EAC-C6F2-4AE4-9FAC-904C44CA7C47](https://github.com/user-attachments/assets/de1f8d76-1bf2-43b7-8333-99393e5bf33c){width=40px height=400px}
+![simulator_screenshot_62368EAC-C6F2-4AE4-9FAC-904C44CA7C47](https://github.com/user-attachments/assets/de1f8d76-1bf2-43b7-8333-99393e5bf33c)
 
 ![simulator_screenshot_A9067DBB-B9DB-40D5-AFD9-165887659DC7](https://github.com/user-attachments/assets/c66d3432-b5c4-4c99-b008-71ad7c1d6a9d)
 
